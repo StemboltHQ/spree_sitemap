@@ -31,7 +31,7 @@ module SpreeSitemap::SpreeDefaults
     options.tap{ |o| o.delete(:domain) }
     active_products = site.spree_products.active
 
-    add(products_path, options.merge(:lastmod => active_products.last_updated))
+    #add(products_path, options.merge(:lastmod => active_products.last_updated))
     active_products.each do |product|
       opts = options.merge(:lastmod => product.updated_at)
 
